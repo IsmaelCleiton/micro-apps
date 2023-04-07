@@ -1,0 +1,7 @@
+name: micro_apps
+
+packages:
+  - app/*
+  - core/*
+  - modules/calculator*
+  - dependencies/*
