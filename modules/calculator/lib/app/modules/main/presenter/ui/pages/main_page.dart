@@ -3,8 +3,6 @@ import 'package:calculator/app/modules/main/domain/usecases/string_to_expression
 import 'package:calculator/app/modules/main/presenter/stores/main_page_store.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

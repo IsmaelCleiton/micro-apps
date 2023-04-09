@@ -10,14 +10,12 @@ class StringToExpressionUsecase implements IStringToExpressionUsecase {
   @override
   Future<ExpressionEntity> call(String expression) async {
     int i = 0;
-    int j = 0;
     int k = 0;
     List<double> numbers = [];
     List<String> operators = [];
 
     for (; i < expression.length; i++) {
       if (isNumeric(expression[i])) {
-        j++;
       } else if (expression[i] != '.') {
         operators.add(expression[i]);
         numbers.add(double.parse(expression.substring(k, i)));

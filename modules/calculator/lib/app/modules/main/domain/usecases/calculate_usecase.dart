@@ -12,9 +12,6 @@ class CalculateUsecase implements ICalculateUsecase {
     List<double> numbers = [];
     List<String> operators = [];
 
-    print(expression.numbers);
-    print(expression.operators);
-
     if (expression.operators.isEmpty) {
       return expression.numbers[0];
     }

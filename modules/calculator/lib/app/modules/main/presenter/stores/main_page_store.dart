@@ -1,4 +1,3 @@
-import 'package:calculator/app/modules/main/domain/entities/expression_entity.dart';
 import 'package:calculator/app/modules/main/domain/usecases/calculate_usecase.dart';
 import 'package:calculator/app/modules/main/domain/usecases/string_to_expression_usecase.dart';
 import 'package:dependencies/dependencies.dart';
@@ -17,7 +16,6 @@ class MainPageStore extends Store<String> {
   }
 
   void calculate() async {
-    print(state);
     var expression = await _stringToExpressionUsecase(state);
     double result = await _calculate(expression);
     update(result.toString());

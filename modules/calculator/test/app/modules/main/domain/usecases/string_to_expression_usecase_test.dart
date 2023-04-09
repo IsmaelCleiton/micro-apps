@@ -3,7 +3,7 @@ import 'package:calculator/app/modules/main/domain/usecases/string_to_expression
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  var usecase = StringToExpressionUsecase();
+  var usecase = const StringToExpressionUsecase();
 
   test(
       'Quero testar o retorno da expressionEntity ao inserir uma String válida',

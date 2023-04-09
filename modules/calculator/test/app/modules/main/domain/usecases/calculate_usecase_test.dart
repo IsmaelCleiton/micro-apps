@@ -3,12 +3,11 @@ import 'package:calculator/app/modules/main/domain/usecases/calculate_usecase.da
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  var usecase = CalculateUsecase();
+  var usecase = const CalculateUsecase();
 
   test('Quero ', () async {
     var result = await usecase(
         const ExpressionEntity(numbers: [2, 2], operators: ['+']));
     expect(result, isA<double>());
-    print(result);
   });
 }
