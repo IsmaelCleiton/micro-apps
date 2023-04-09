@@ -10,7 +10,5 @@ void main() {
       () async {
     var result = await usecase('2333+23-55-2123123*123/64');
     expect(result, isA<ExpressionEntity>());
-    print(result.numbers);
-    print(result.operators);
   });
 }
