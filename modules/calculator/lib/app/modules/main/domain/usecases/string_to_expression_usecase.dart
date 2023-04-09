@@ -4,7 +4,10 @@ abstract class IStringToExpressionUsecase {
   Future<ExpressionEntity> call(String expression);
 }
 
-class StringToExpressionUsecase {
+class StringToExpressionUsecase implements IStringToExpressionUsecase {
+  const StringToExpressionUsecase();
+
+  @override
   Future<ExpressionEntity> call(String expression) async {
     int i = 0;
     int j = 0;
@@ -15,7 +18,7 @@ class StringToExpressionUsecase {
     for (; i < expression.length; i++) {
       if (isNumeric(expression[i])) {
         j++;
-      } else {
+      } else if (expression[i] != '.') {
         operators.add(expression[i]);
         numbers.add(double.parse(expression.substring(k, i)));
         k = i + 1;

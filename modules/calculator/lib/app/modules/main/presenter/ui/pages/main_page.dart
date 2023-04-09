@@ -1,3 +1,5 @@
+import 'package:calculator/app/modules/main/domain/usecases/calculate_usecase.dart';
+import 'package:calculator/app/modules/main/domain/usecases/string_to_expression_usecase.dart';
 import 'package:calculator/app/modules/main/presenter/stores/main_page_store.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
@@ -14,13 +16,21 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    final store = MainPageStore();
+    final store = MainPageStore(
+      calculate: Modular.get<CalculateUsecase>(),
+      stringToExpressionUsecase: Modular.get<StringToExpressionUsecase>(),
+    );
     return Scaffold(
       appBar: AppBar(
         title: const Text('CALCULADORA'),
       ),
       body: ScopedBuilder<MainPageStore, String>(
           store: store,
+          onLoading: (
+            _,
+          ) {
+            return const CircularProgressIndicator();
+          },
           onState: (context, state) {
             return Column(
               children: [
@@ -131,6 +141,12 @@ class _MainPageState extends State<MainPage> {
                         store.erase();
                       },
                       child: const Text('C'),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        store.calculate();
+                      },
+                      child: const Text('='),
                     ),
                   ],
                 )

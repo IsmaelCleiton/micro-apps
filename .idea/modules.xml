@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules\\calculator/melos_calculator.iml" filepath="$PROJECT_DIR$/modules\\calculator/melos_calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_micro_apps.iml" filepath="$PROJECT_DIR$/melos_micro_apps.iml" />
+    </modules>
+  </component>
+</project>
