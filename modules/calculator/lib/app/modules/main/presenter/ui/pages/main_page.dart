@@ -17,8 +17,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     final store = MainPageStore(
-      calculate: Modular.get<CalculateUsecase>(),
-      stringToExpressionUsecase: Modular.get<StringToExpressionUsecase>(),
+      calculate: Modular.get<ICalculateUsecase>(),
+      stringToExpressionUsecase: Modular.get<IStringToExpressionUsecase>(),
     );
     return Scaffold(
       appBar: AppBar(
