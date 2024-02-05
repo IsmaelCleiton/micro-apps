@@ -17,7 +17,17 @@ class InitialPage extends StatelessWidget {
               Modular.to.pushNamed('/calculator');
             },
             child: Row(
-              children: const [Text('Calculadora'), Icon(Icons.numbers)],
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.calculate_rounded,
+                  size: 30.0,
+                ),
+                Container(
+                  padding: EdgeInsets.all(16),
+                  child: Text('Calculadora'),
+                ),
+              ],
             ),
           )
         ],
